@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+ .container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 2%;
+    grid-row-gap: 10px;
+ }
+
+ .otherElements1 {
+    grid-area: 1 / 1 / 2 / 5;
+    background-color: coral;
+    margin-bottom: 5rem;
+    
+ }
+
+ .otherElements2 {
+    grid-area: 1 / 5 / 2 / 13;
+    background-color: cornflowerblue;
+    margin-bottom: 5rem;
+ }
+
+  #carousel {
+    grid-area: 2 / 1 / 4 / 9; 
+    position: relative;
+    height: auto;
+  }
+
+  #text {
+    grid-area: 2 / 9 / 4 / 13;
+  }
+
+  .otherElements3 {
+    grid-area: 4 / 1 / 5 / 13;
+    background-color: crimson;
+    margin-top: 5rem;
+  }
+
+  .grid1 {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+
+  .grid2 {
+     width: 100%;
+     display: flex;
+     overflow: hidden;
+     position: relative;
+     border-radius: 5px;
+  }
+  
+  .slide-image1 {
+    width: auto;
+    height: 30vh;
+    border-radius: 5px;
+    margin: 0 10px 5px 0;
+  }
+
+  .slide-image2 {
+     width: auto;
+      height: 30vh;
+      margin: 5px 10px 0 0;
+      border-radius: 5px;
+  }
+
+
+  .arrows {
+     position: absolute;
+     right: 0;
+     width: 10vw;
+     height: 34vh;
+     background-color: white;
+     padding-left: 20px;
+     margin-top: 5px;
+  }
+
+
+  .left-arrow {
+      position: absolute;
+      right: 0;
+      width: 63px;
+      height: 63px;
+      background-image: url("/Slider/arrow-gray-left.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      border: 2px solid rgba(0, 0, 0, 0.15);
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.5s;
+  }
+
+  .left-arrow:hover {
+     background-image: url("/Slider/arrow-blue-left.png");
+     background-repeat: no-repeat;
+     background-position: center;
+     border: 2px solid rgba(44, 44, 175, 0.823);
+  }
+
+  .right-arrow {
+     position: absolute;
+     right: 0;
+     top: calc(63px + 10px);
+     width: 63px;
+     height: 63px;
+     background-image: url("/Slider/arrow-gray-right.png");
+     background-repeat: no-repeat;
+     background-position: center;
+     border: 2px solid rgba(0, 0, 0, 0.15);
+     border-radius: 5px;
+     cursor: pointer;
+     transition: 0.5s;
+  }
+
+  .right-arrow:hover {
+    background-image: url("/Slider/arrow-blue-right.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px solid rgba(44, 44, 175, 0.823);
+  }
+
+  #text h3 {
+      width: 100%;
+      text-align: start;
+      color: rgb(41, 41, 157);
+      font-size: 2rem;
+      font-weight: 800;
+      font-family:Arial, Helvetica, sans-serif;
+      line-height: 2.5rem;
+      margin-bottom: 5%;;
+  }
+
+  #text p {
+      font-size: 1rem;
+      line-height: 2rem;
+  }
+
+  @media only screen and (max-width: 650px) {
+     #carousel {
+        grid-area: 2 / 1 / 3 / 13;
+        height: auto;
+        overflow-x: hidden;
+     }
+
+     #text {
+        grid-area: 3 / 1 / 4 / 13;
+        width: 80%;
+        margin: auto;
+     }
+
+     .arrows {
+         padding-left: 100px;
+     }
+     
+  }
+  
+
